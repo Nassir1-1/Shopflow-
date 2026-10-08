@@ -1,0 +1,168 @@
+/* ══════════════════════════════════════════════════════
+   FONT SETUP
+   ══════════════════════════════════════════════════════
+   1. Place your purchased font files in /public/fonts/
+   2. The @font-face blocks below are ready — just make
+      sure the filenames match.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Purchased fonts (uncomment when files are in /public/fonts/) ── */
+/*
+@font-face {
+  font-family: 'Brione';
+  src: url('/fonts/Brione.woff2') format('woff2'),
+       url('/fonts/Brione.woff')  format('woff');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Cravelo';
+  src: url('/fonts/Cravelo.woff2') format('woff2'),
+       url('/fonts/Cravelo.woff')  format('woff');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Moralana';
+  src: url('/fonts/Moralana.woff2') format('woff2');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Symphonie Calligraphy';
+  src: url('/fonts/SymphonieCalligraphy.woff2') format('woff2');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Bidena';
+  src: url('/fonts/Bidena.woff2') format('woff2');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Armelie';
+  src: url('/fonts/Armelie.woff2') format('woff2');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Vintage Melinda';
+  src: url('/fonts/VintageMelinda.woff2') format('woff2');
+  font-weight: normal; font-style: normal;
+}
+*/
+
+/* ── Google Fonts fallbacks (always active) ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Pacifico&family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+/* ══════════════════════════════════════════════════════
+   CSS VARIABLES — one place to control all fonts/colors
+   ══════════════════════════════════════════════════════ */
+:root {
+  /* Classic Art */
+  --font-classic-gallery-title: 'Brione', 'Cormorant Garamond', Georgia, serif;
+  --font-classic-title:         'Moralana', 'Cormorant Garamond', Georgia, serif;
+  --font-classic-script:        'Symphonie Calligraphy', 'Great Vibes', cursive;
+  --font-classic-body:          'Bidena', 'EB Garamond', Georgia, serif;
+
+  /* Graphic Design */
+  --font-graphic-gallery-title: 'Cravelo', 'Pacifico', cursive;
+  --font-graphic-artist:        'Armelie', 'Pacifico', cursive;
+  --font-graphic-body:          'Vintage Melinda', 'Josefin Sans', sans-serif;
+}
+
+/* ══════════════════════════════════════════════════════
+   RESET & BASE
+   ══════════════════════════════════════════════════════ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-classic-body);
+  min-height: 100vh;
+  background: #0a0a0f;
+}
+
+body.mode-graphic {
+  font-family: var(--font-graphic-body);
+}
+
+/* ══════════════════════════════════════════════════════
+   GALLERY/STUDIO PAGE TITLE  ← Brione / Cravelo
+   ══════════════════════════════════════════════════════ */
+.gallery-page-title {
+  font-family: var(--font-classic-gallery-title);
+  font-size: 32px;
+  font-weight: 800;
+  color: #f0e6c8;
+}
+
+body.mode-graphic .gallery-page-title {
+  font-family: var(--font-graphic-gallery-title);
+  color: #ffffff;
+}
+
+/* ══════════════════════════════════════════════════════
+   SHARED LAYOUT
+   ══════════════════════════════════════════════════════ */
+.page-wrapper { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+
+.section-title {
+  font-size: 24px; font-weight: 700;
+  color: #f0e6c8; margin-bottom: 24px;
+  font-family: var(--font-classic-gallery-title);
+}
+body.mode-graphic .section-title {
+  font-family: var(--font-graphic-gallery-title);
+  color: #ffffff;
+}
+
+/* ══════════════════════════════════════════════════════
+   SEARCH BAR
+   ══════════════════════════════════════════════════════ */
+.search-bar { display: flex; gap: 12px; margin-bottom: 32px; }
+.search-input {
+  flex: 1; padding: 12px 18px;
+  border: 2px solid rgba(255,255,255,0.12);
+  border-radius: 12px; font-size: 15px; outline: none;
+  background: rgba(255,255,255,0.07); color: white;
+  transition: border .2s;
+}
+.search-input::placeholder { color: rgba(255,255,255,0.35); }
+.search-input:focus { border-color: #a78bfa; }
+
+/* ══════════════════════════════════════════════════════
+   CART GLASS CARDS
+   ══════════════════════════════════════════════════════ */
+.cart-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px; background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; margin-bottom: 12px;
+}
+.cart-summary {
+  background: rgba(255,255,255,0.06); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 24px; margin-top: 24px;
+}
+
+/* ══════════════════════════════════════════════════════
+   TOAST
+   ══════════════════════════════════════════════════════ */
+.toast {
+  position: fixed; bottom: 24px; right: 24px;
+  background: rgba(20,20,30,0.95); backdrop-filter: blur(12px);
+  color: white; padding: 14px 20px; border-radius: 12px; font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 9999;
+  border: 1px solid rgba(255,255,255,0.1);
+  animation: slideUp .3s ease;
+}
+
+/* ══════════════════════════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════════════════════════ */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes pulse { 0%,100% { opacity: .3; } 50% { opacity: .6; } }
+@keyframes spin  { to { transform: rotate(360deg); } }
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50%     { transform: translateX(-50%) translateY(10px); }
+}
