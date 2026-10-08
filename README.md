@@ -1,15 +1,34 @@
 # ShopFlow
 
 <div align="center">
+  <svg width="980" height="220" viewBox="0 0 980 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ShopFlow logo">
+    <defs>
+      <linearGradient id="shopflowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FACC15" />
+        <stop offset="35%" stop-color="#F59E0B" />
+        <stop offset="65%" stop-color="#C084FC" />
+        <stop offset="100%" stop-color="#60A5FA" />
+      </linearGradient>
+      <linearGradient id="shopflowGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#111827" />
+        <stop offset="100%" stop-color="#0F172A" />
+      </linearGradient>
+    </defs>
 
+    <rect x="20" y="25" width="940" height="170" rx="32" fill="url(#shopflowGlow)" stroke="rgba(255,255,255,0.12)"/>
+    <circle cx="110" cy="110" r="52" fill="none" stroke="url(#shopflowGradient)" stroke-width="4" opacity="0.9"/>
+    <path d="M87 140 L107 80 L126 140" fill="none" stroke="url(#shopflowGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M95 115 H118" stroke="url(#shopflowGradient)" stroke-width="7" stroke-linecap="round"/>
 
+    <text x="470" y="110" text-anchor="middle" font-size="72" font-weight="900" font-family="Segoe UI, Arial, sans-serif" letter-spacing="6" fill="url(#shopflowGradient)">SHOPFLOW</text>
+    <text x="470" y="148" text-anchor="middle" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif" letter-spacing="7" fill="#CBD5E1">ART • BOOKS • DESIGN • SHOP</text>
+  </svg>
+</div>
 
 [![Java](https://img.shields.io/badge/Java-17-ED8B00.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-6DB33F.svg)](https://spring.io/projects/spring-boot)
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000.svg)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
-
-</div>
 
 ShopFlow is a modern commerce and digital marketplace platform that blends artistic discovery, curated product browsing, and online shopping in a single experience. The project is split into two main parts:
 
