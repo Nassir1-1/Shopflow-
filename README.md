@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="ShopFlow banner" width="100%" />
+
 
 [![Java](https://img.shields.io/badge/Java-17-ED8B00.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-6DB33F.svg)](https://spring.io/projects/spring-boot)
